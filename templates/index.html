@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <!--解消度をディスプレイサイズに合わせる-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+        <title>画像から数字を認識する</title>
+    </head>
+    <body>
+        <h1 class="text-center bg-warning" >数字認識するマン</h1>
+
+        <!--ファイルをアップロードする場合は次のようにenctypeを設定する必要がある-->
+        <form method="POST" action="/send" enctype="multipart/form-data">
+            <div class="text-center">
+                <!--nameでapp.pyで受け取る際の名前を付ける-->
+                <input type="file"  name="inputImage">
+                <input type="submit" value="検索">
+            </div>
+        </form>
+        <p>結果：　{{output}}</p>
+    </body>
+</html>
